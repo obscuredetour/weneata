@@ -1,0 +1,83 @@
+@import '_base';
+
+//--------- styling for rest of page -------//
+main {
+  margin: 0 auto;
+  @include sizes($small){
+    margin-top: -4.5rem;
+  }
+  // padding-top: 4.5rem;
+
+  > section:not([class]) {
+    padding: 1rem;
+    max-width: 40rem;
+    margin: 2rem auto;
+
+    > .subtitle {
+      padding-bottom: 1rem;
+      font-size: 1.125rem;
+
+      @media screen and (min-width: 590px) {
+        padding-bottom: 4rem;
+      }
+    }
+  }
+
+  @media screen and (min-width: $breakpoint) {
+    padding-top: 6.5rem;
+  }
+
+  .featured-list.-features {
+    @include sizes($small){
+      column-count: 2;
+      column-gap: 2.5rem;
+    }
+  }
+}
+
+.grow {
+  background-color: $verdigris;
+  position: relative;
+
+  &__heading {
+    @include section-heading;
+    color: #fff;
+  }
+}
+
+.section {
+  padding: 2rem 0;
+
+  &__wrapper{
+    @include default-padding;
+    @include container;
+    position: relative;
+  }
+  &__separator{
+    position: absolute;
+    top: -21.5vw;
+    max-height: rem(150);
+    width: 100%;
+    display: grid;
+    * {
+      grid-area: 1/1;
+    }
+  }
+}
+
+//handle bottom nav
+.nav.-sticky.-bottom{
+  @include sizes(0, $breakpoint){
+    + main {
+      padding-top: 0;
+    }
+  }
+}
+
+//footer
+.poweredby, .poweredby:first-of-type {
+  margin: 7rem auto 1rem;
+  font-size: 0.8125rem;
+  color: $gray;
+  text-align: center 
+}

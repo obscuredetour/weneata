@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Simply Navigation - A lightweight navigation component</title>
+  <meta property="og:title" content="Simply Navigation"/>
+  <meta name="description" property="og:description" content="A simple navigation component built using vanilla JS &amp; Flexbox."/>
+  <meta property="og:url" content="https://github.com/obscuredetour/simply-nav/index.html"/>
+  <meta property="og:image" content="https://raw.githubusercontent.com/obscuredetour/simply-nav/master/assets/images/logo-full-dark.svg"/>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+
+<body>
+  <!-- Navigation / nav-wrapper component -->
+  <!-- Right-side hamburger markup -->
+  <header class="nav -right-aligned">
+    <nav class="nav-main">
+      <a class="nav-logo" href="#">
+        <img class="nav-logo__image" id="logo" src="assets/images/logo.jpg" alt="Logo">
+      </a>
+      <ul class="nav-list" role="menu" aria-hidden="true">
+        <div class="nav-list__wrapper">
+          <!-- <li class="nav-list__item" role="none">
+            <a class="nav-logo" href="#">
+              <img class="nav-logo__image" id="logo" src="assets/images/logo.svg" alt="Logo">
+            </a>
+          </li> -->
+          <li class="nav-list__item" role="none">
+            <a class="nav-list__link" role="menuitem" href="https://github.com/obscuredetour/simply-nav">GitHub</a>
+          </li>
+          <li class="nav-list__item" role="none">
+            <a class="nav-list__link" role="menuitem" href="#features">Features</a>
+          </li>
+          <li class="nav-list__item" role="none">
+            <a class="nav-list__link" role="menuitem" href="#custom">Customizable</a>
+          </li>
+          <li class="nav-list__item" role="none">
+            <a class="nav-list__link" role="menuitem" href="#how-to-use">How to use</a>
+          </li>
+          <li class="nav-list__item" role="none">
+            <a class="nav-list__link" role="menuitem" href="#example">Example Link</a>
+          </li>
+        </div>
+      </ul>
+      <button class="nav-toggle" type="button" aria-expanded="false">
+        <div class="burger -squeeze -offset" type="button">
+          <span class="burger-lines"></span>
+        </div>
+      </button>
+    </nav>
+    <ul class="nav-list -mobile" role="menu" aria-hidden="true">
+      <div class="nav-list__wrapper">
+        <li class="nav-list__item" role="none">
+          <a class="nav-list__link" role="menuitem" href="https://github.com/obscuredetour/simply-nav">GitHub</a>
+        </li>
+        <li class="nav-list__item" role="none">
+          <a class="nav-list__link" role="menuitem" href="#features">Features</a>
+        </li>
+        <li class="nav-list__item" role="none">
+          <a class="nav-list__link" role="menuitem" href="#custom">Customizable</a>
+        </li>
+        <li class="nav-list__item" role="none">
+          <a class="nav-list__link" role="menuitem" href="#how-to-use">How to use</a>
+        </li>
+        <li class="nav-list__item" role="none">
+          <a class="nav-list__link" role="menuitem" href="#example">Example Link</a>
+        </li>
+      </div>
+      <div class="nav-overlay"></div>
+    </ul>
+  </header>  
+
+  <main>
+
+    <section class="hero">
+      <div class="hero__wrapper">
+        <div class="hero__content">
+          <h1 class="hero__heading">
+            We'll deal with the details
+            so you can build your business
+          </h1>
+          <p class="hero__copy">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde rerum animi voluptate saepe accusamus molestias consequuntur, possimus sunt cupiditate labore.</p>
+          <a href="#" class="hero__button">Contact Us</a>
+        </div>
+        <div class="hero__image"></div>
+      </div>
+    </section>
+    
+    <section class="section grow">
+      <div class="section__separator">
+        <img src="/assets/images/wave06-verdigris.svg" alt="">
+        <!-- <img src="/assets/images/wave01-verdigris.svg" alt=""> -->
+        <!-- <img src="/assets/images/wave02-verdigris.svg" alt="">
+        <img src="/assets/images/wave03-verdigris.svg" alt="">
+        <img src="/assets/images/wave04-verdigris.svg" alt=""> -->
+        <!-- <img src="/assets/images/wave05-verdigris.svg" alt=""> -->
+      </div>
+      <div class="section__wrapper">
+        <h2 class="grow__heading">We want to help your business GROW</h2>
+        <ul class="featured-list -features">
+          <li>No dependencies.</li>
+          <li>Fully responsive.</li>
+          <li>Built using Flexbox & vanilla JavaScript only.</li>
+          <li>Mobile menu closes when a link is selected.</li>
+          <li>Easy close mobile menu. Closable via 'X' and alt-side page overlay.</li>
+          <li>Buttons & links made for mobile. Large footprint for optimal finger usage.</li>
+          <li>Menu button animates to a close button 'X' (CSS only - <a href="https://github.com/march08/animated-burgers" target="_blank">thx march08</a>)</li>
+          <li>Mobile menu scrollable (if its content goes beyond the screen)</li>
+          <li>Page and body are not scrollable (when mobile menu open).</li>
+          <li>Written in SCSS.</li>
+          <li>Written using <a href="https://rscss.io/" target="_blank">RSCSS</a> guidelines.</li>
+          <li class="-new">Left &amp; Right side layouts now supported.</li>
+          <li class="-new">ARIA/Accessibility updates, keyboard navigation.</li>
+        </ul>
+        
+        <hr class="-major">
+    
+        <h2 id="custom">Features</h2>
+        <h3 id="custom">Customizable</h3>
+        <ul class="featured-list">
+          <li>Breakpoint variable - <strong>default at 800px</strong></li>
+          <li>Sticky (fixed) navigation bar available. <a href="#sticky-nav">See below</a>.</li>
+          <li>Traditional or offset hamburger menu icons. <a href="#menu-icon">See below</a></li>
+          <li>Bottom mobile nav bar for the bold! <a href="#bottom-nav">See below</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- <section>
+      <span class="image -left">
+        <img src="assets/images/logo-full.svg" alt="Simply nav logo">
+      </span>
+      <h1 class="_mt0">Simply Navigation</h1>
+      <p class="_mthalf subtitle">Lightweight simple navigation built with flexbox and vanilla JavaScript</p>
+      
+      <h3 id="features">Features</h3>
+      <ul class="featured-list -features">
+        <li>No dependencies.</li>
+        <li>Fully responsive.</li>
+        <li>Built using Flexbox & vanilla JavaScript only.</li>
+        <li>Mobile menu closes when a link is selected.</li>
+        <li>Easy close mobile menu. Closable via 'X' and alt-side page overlay.</li>
+        <li>Buttons & links made for mobile. Large footprint for optimal finger usage.</li>
+        <li>Menu button animates to a close button 'X' (CSS only - <a href="https://github.com/march08/animated-burgers" target="_blank">thx march08</a>)</li>
+        <li>Mobile menu scrollable (if its content goes beyond the screen)</li>
+        <li>Page and body are not scrollable (when mobile menu open).</li>
+        <li>Written in SCSS.</li>
+        <li>Written using <a href="https://rscss.io/" target="_blank">RSCSS</a> guidelines.</li>
+        <li class="-new">Left &amp; Right side layouts now supported.</li>
+        <li class="-new">ARIA/Accessibility updates, keyboard navigation.</li>
+      </ul>
+      
+      <hr class="-major">
+  
+      <h2 id="custom">Features</h2>
+      <h3 id="custom">Customizable</h3>
+      <ul class="featured-list">
+        <li>Breakpoint variable - <strong>default at 800px</strong></li>
+        <li>Sticky (fixed) navigation bar available. <a href="#sticky-nav">See below</a>.</li>
+        <li>Traditional or offset hamburger menu icons. <a href="#menu-icon">See below</a></li>
+        <li>Bottom mobile nav bar for the bold! <a href="#bottom-nav">See below</a></li>
+      </ul>
+      <hr id="sticky-nav">
+      <h4>Sticky (fixed) navigation</h4>
+      <p>To enable a fixed nav bar, add class <code>-sticky</code> to the <code>nav-main</code> element.</p>
+      <div class="flex-container">
+        <div class="box">
+          <p>Sticky Nav is <span class="sticky-text"><strong>Off</strong></span></p>
+        </div>
+        <div class="box -alt">
+          <h5>Toggle sticky nav bar</h5>
+          <button class="button-default -sticky">Toggle</button>
+        </div>
+      </div>
+      <p><strong>Note:</strong> Sticky navigation bar requires padding and/or margin on the parent or adjacent element. For example, on this page the adjacent <em>main</em> HTML element has a top padding of 6.5rem (nav height is 4.5rem).
+      </p>
+
+      <hr id="menu-icon">
+
+      <h4 class="new-pill">Menu icon</h4>
+      <p>To enable the traditional menu icon, remove class <code>-offset</code> from the <code>burger</code> element.</p>
+      <div class="flex-container">
+        <div class="box">
+          <p>Traditional icon is <span class="menu-text"><strong>Off</strong></span></p>
+        </div>
+        <div class="box -alt">
+          <h5>Toggle menu icon</h5>
+          <button class="button-default -menu">Toggle</button>
+        </div>
+      </div>
+
+      <hr id="bottom-nav">
+
+      <h4 class="new-pill">Bottom mobile nav bar</h4>
+      <p>To enable the bottom mobile nav bar, add class <code>-bottom</code> on the <code>nav-main</code> element.</p>
+      <div class="flex-container">
+        <div class="box">
+          <p>Bottom mobile nav bar is <span class="bottomnav-text"><strong>Off</strong></span></p>
+        </div>
+        <div class="box -alt">
+          <h5>Toggle bottom mobile nav</h5>
+          <button class="button-default -bottomnav">Toggle</button>
+        </div>
+      </div>
+      <p><strong>Note:</strong> Bottom mobile nav bar requires a sticky navigation bar. To enable a fixed nav bar, add class <code>-sticky</code> to the <code>nav-main</code> element. See the <a href="#sticky-nav">Sticky navigation</a> section for additional info.
+      </p>
+
+      <hr class="-major" id="how-to-use">
+      <h3>How to use</h3>
+      <p>Clone or download the repository to build a static website. Or alternatively insert the respective files into your project.</p>
+      <ul>
+        <li><code>simply-nav.js</code> - has all necessary JavaScript functions
+          <ul>
+            <li>File can be placed into your project or the anonymous function inside can be pasted into an existing JS file or <code>&lt;script&gt;</code> tag within an HTML file.</li>
+          </ul>
+        </li>
+        <li><code>nav.css</code> - has all necessary CSS styles for the navigation
+          <ul>
+            <li>File can be placed into your project or pasted into an existing CSS file or <code>&lt;style&gt;</code> tag within an HTML file.</li>
+          </ul>
+        </li>
+        <li>Markup structure can be found in <code>index.html</code>
+          <ul>
+            <li>The <code>nav-main</code> element contains all necessary markup for Simply Navigation to function.</li>
+          </ul>
+        </li>
+        <li>Standalone HTML file will be making a comeback in a future version.</li>
+      </ul>
+      <h3 id="example">Example Link</h3>
+      <p>This is an example that demonstrates an anchor link on the same page. The mobile menu closes when this link is chosen. This provides a more seamless experience for the user without requiring them to close the mobile menu after choosing a link.</p>
+    </section> -->
+
+  </main>
+  <footer class="footer">
+    <p class="poweredby">Powered with ❤️ by <a target="_blank" href="https://github.com/obscuredetour/">obscure detour</a>.</p>
+  </footer>
+
+
+
+  <script src="assets/js/simply-nav.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+.button-default {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: $space;
+  background: $link-color;
+  font-weight: 600;
+  border: 0;
+  border-radius: 6px;
+  font-size: 1rem;
+  margin: 0 0.125rem;
+  padding: 0.3125rem 0.75rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  background-clip: padding-box;
+  -webkit-background-clip: padding-box;
+  z-index: 2;
+  &:hover {
+    background: $link-color-hover;
+  }
+}

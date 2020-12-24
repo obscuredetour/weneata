@@ -1,0 +1,26 @@
+{
+  "name": "weneata",
+  "version": "0.0.1",
+  "description": "Weneata website",
+  "main": "index.js",
+  "dependencies": {
+    "node-sass": "^4.14.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "scss": "node-sass -w assets/scss/ -o assets/css/",
+    "serve": "browser-sync start --port 3000  --server --files '**/*.css, **/*.html, **/*.js'",
+    "go": "npm run scss | npm run serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+git@github.com:obscuredetour/weneata.git"
+  },
+  "keywords": [],
+  "author": "Jeffrey Summers",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/obscuredetour/weneata/issues"
+  },
+  "homepage": "https://github.com/obscuredetour/weneata#readme"
+}

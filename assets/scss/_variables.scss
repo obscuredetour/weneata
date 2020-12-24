@@ -1,0 +1,80 @@
+// nav breakpoint variable
+$breakpoint: 800;
+$nav-height: 6.5rem;
+
+// media query breakpoints
+$large: 1136;
+$medium: 1024;
+$small: 768;
+$xsmall: 480;
+
+// Background colors & shades of grays
+$jet: hsl(0, 0%, 13%);
+$space: hsl(0, 0%, 19%);
+$raven: hsl(0, 0%, 23%);
+$stone: hsl(0, 0%, 27%);
+$mine: hsl(0, 0%, 32%);
+$asher: hsl(0, 0%, 38%);
+$boulder: hsl(0, 0%, 49%);
+$heather: hsl(0, 0%, 62%);
+$gray: hsl(0, 0%, 69%);
+$alto: hsl(0, 0%, 81%);
+$pearl: hsl(0, 0%, 88%);
+$alabaster: hsl(0, 0%, 97%);
+
+// colors
+$deep-forest: hsl(125, 86%, 14%);
+$forest: hsl(125, 73%, 20%);
+$grass: hsl(125, 56%, 29%);
+$clover: hsl(122, 47%, 35%);
+$lime: hsl(122, 39%, 41%);
+$honest: hsl(121, 35%, 51%);
+$lucky: hsl(123, 38%, 63%);
+$mint: hsl(122, 42%, 75%);
+$key-lime: hsl(126, 49%, 84%);
+$mint-ice: hsl(125, 65%, 93%);
+
+// main colors
+$lotus     : hsl(4, 40%, 34%);
+$woodrush  : hsl(68, 54%, 11%);
+$verdigris : hsl(71, 28%, 31%);
+$napa      : hsl(42, 12%, 63%);
+$pampas    : hsl(30, 16%, 93%);
+
+// main support
+// lotus support
+$pink-dust : hsl(18, 29%, 70%);
+$lotus     : hsl(4, 40%, 34%);
+$spice     : hsl(7, 34%, 44%);
+$potpourri : hsl(12, 45%, 91%);
+
+// woodrush + verdigris support 
+$woodrush  : hsl(68, 54%, 11%);
+$thatch    : hsl(76, 45%, 17%);
+$verdigris : hsl(71, 28%, 31%);
+$chalet    : hsl(82, 34%, 35%);
+
+// napa support
+$zorba     : hsl(43, 10%, 56%);
+$napa      : hsl(42, 12%, 63%);
+$napa1     : hsl(53, 17%, 76%);
+
+// pampas support
+$oyster    : hsl(30, 14%, 86%);
+$pampas    : hsl(30, 16%, 93%);
+$hint      : hsl(30, 18%, 97%);
+
+
+//--- Page text colors ---//
+
+//nav link color
+$text-color: $space;
+$text-color-nop: $jet;
+
+$link-color: $lotus;
+$link-color-hover: $spice;
+// $link-color: $mint;
+// $link-color-hover: $key-lime;
+
+////////////
+$font-sans: 'Cabin', -apple-system, BlinkMacSystemFont, 'Roboto', 'Segoe UI', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans','Helvetica Neue', Arial, sans-serif;

@@ -1,0 +1,101 @@
+.hero {
+  position: relative;
+  @include container;
+  margin-bottom: 12vw;
+
+  &__wrapper{
+    position: relative;
+    @include default-padding;
+    display: flex;
+    flex-direction: column;
+
+    @include sizes($small){
+      flex-direction: row;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+
+    @include sizes($small){
+      width: 50%;
+    }
+  }
+
+  &__image {
+    background-image: url('../images/hero_home.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    padding-bottom: 66%;
+    border-radius: 12px;
+    position: relative;
+    z-index: 0;
+
+    @include sizes($small){
+      width: 60%;
+      margin-left: -10%;
+
+      &:before{
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 15%, rgba(255,255,255,0.9) 33%, rgba(255,255,255,0.8) 50%, rgba(255,255,255,0) 100%);
+        height: 100%;
+        width: 50%;
+        border-radius: 12px;
+      }
+      &:after{
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: linear-gradient(rgba(255,255,255,1) 0%, rgba(255,255,255,1) 15%, rgba(255,255,255,0.9) 33%, rgba(255,255,255,0.8) 50%, rgba(255,255,255,0) 100%);
+        height: 50%;
+        width: 100%;
+        border-radius: 12px;
+      }
+    }
+
+    @include sizes($medium){
+      padding-bottom: 60%;
+    }
+
+    @include sizes($large){
+      padding-bottom: 76%;
+      width: 70%;
+      margin-left: -20%;
+    }
+  }
+
+  &__button {
+    @include button();
+    @include sizes($small){
+      align-self: flex-start;
+    }
+  }
+
+  &__heading {
+    @include heading;
+  }
+
+  &__copy {
+    @include font-size(18);
+    line-height: 1.6;
+    margin: 1.5rem 0;
+
+    @include sizes($medium){
+      @include font-size(20);
+    }
+
+    @include sizes($large){
+      @include font-size(22);
+    }
+  }
+}
