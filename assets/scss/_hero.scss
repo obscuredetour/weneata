@@ -1,7 +1,11 @@
 .hero {
   position: relative;
   @include container;
-  margin-bottom: 12vw;
+  margin-bottom: 4rem;
+
+  @include sizes($small){
+    margin-bottom: 5rem;
+  }
 
   &__wrapper{
     position: relative;

@@ -216,7 +216,6 @@ hr {
   -webkit-transform-style: preserve-3d;
   -webkit-backface-visibility: hidden; }
   .nav-main {
-    background-color: transparent;
     max-width: 1136px;
     width: 100%;
     height: 6.5rem;
@@ -272,6 +271,8 @@ hr {
       .nav-list {
         display: flex;
         position: relative;
+        margin: 0 auto -2rem;
+        margin: 0 0 -2rem;
         min-height: initial;
         background: transparent;
         visibility: visible;
@@ -665,7 +666,10 @@ hr {
   width: 100%;
   max-width: 1136px;
   box-sizing: border-box;
-  margin-bottom: 12vw; }
+  margin-bottom: 4rem; }
+  @media screen and (min-width: 48rem) {
+    .hero {
+      margin-bottom: 5rem; } }
   .hero__wrapper {
     position: relative;
     padding-left: 20px;
@@ -739,13 +743,13 @@ hr {
     border-radius: 28px;
     background-color: #793934;
     color: #fff;
-    font-weight: 700;
-    letter-spacing: 1px;
-    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.15px;
     min-height: 3.125rem;
     padding: 0.875rem 2.5rem;
     transition: color 300ms ease, background-color 300ms ease;
-    font-size: 0.875rem; }
+    font-size: 16px;
+    font-size: 1rem; }
     .hero__button:focus {
       outline: 1px solid #303030; }
     .hero__button:hover {
@@ -808,14 +812,20 @@ main {
       column-gap: 2.5rem; } }
 
 .grow {
-  background-color: #5d6539;
+  background-color: rgba(240, 237, 234, 0.5);
+  padding: 4rem 0;
   position: relative; }
+  .grow + .grow {
+    padding-top: 0; }
+  @media screen and (min-width: 48rem) {
+    .grow {
+      padding: 6rem 0; } }
   .grow__heading {
     font-size: 24px;
     font-size: 1.5rem;
     font-weight: 700;
     letter-spacing: -0.8px;
-    color: #fff; }
+    margin: 0 0 1rem; }
     @media screen and (min-width: 64rem) {
       .grow__heading {
         font-size: 36px;
@@ -824,29 +834,91 @@ main {
       .grow__heading {
         font-size: 48px;
         font-size: 3rem; } }
+  .grow__subheading {
+    font-size: 20px;
+    font-size: 1.25rem;
+    font-weight: 400;
+    margin: 0; }
+    @media screen and (min-width: 64rem) {
+      .grow__subheading {
+        font-size: 22px;
+        font-size: 1.375rem; } }
+    @media screen and (min-width: 71rem) {
+      .grow__subheading {
+        font-size: 24px;
+        font-size: 1.5rem; } }
+  .grow__cards {
+    margin: 2rem 0 0;
+    display: flex; }
+    @media screen and (min-width: 48rem) {
+      .grow__cards {
+        margin: 3rem 0 0; } }
+  .grow__card {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 2rem 1rem 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column; }
+    @media screen and (min-width: 48rem) {
+      .grow__card {
+        box-sizing: border-box;
+        width: calc(33.33333% - 14px);
+        margin-right: 20px;
+        margin-right: 1.25rem; }
+        .grow__card:last-of-type {
+          margin-right: 0; } }
+    @media screen and (min-width: 64rem) {
+      .grow__card {
+        box-sizing: border-box;
+        width: calc(33.33333% - 22px);
+        margin-right: 32px;
+        margin-right: 2rem; } }
+    .grow__card-content {
+      padding: 0 1rem;
+      margin: 1.5rem auto auto; }
+    .grow__card-image {
+      padding: 0;
+      margin: -1rem 0 1rem; }
+      .grow__card-image img {
+        width: 100%;
+        border-radius: 12px; }
+    .grow__card-icon {
+      padding: 1.75rem;
+      margin: 0 auto;
+      background-color: rgba(201, 170, 156, 0.5);
+      border-radius: 100%;
+      width: 100px;
+      height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+      .grow__card-icon img {
+        width: 100%;
+        max-width: 50px; }
+    .grow__card-title {
+      font-size: 18px;
+      font-size: 1.125rem;
+      font-weight: 500;
+      margin: 0 0 1rem; }
+      @media screen and (min-width: 64rem) {
+        .grow__card-title {
+          font-size: 20px;
+          font-size: 1.25rem; } }
 
 .section {
-  padding: 2rem 0; }
+  position: relative; }
   .section__wrapper {
     padding-left: 20px;
     padding-right: 20px;
     margin: 0 auto;
     width: 100%;
     max-width: 1136px;
-    box-sizing: border-box;
-    position: relative; }
+    box-sizing: border-box; }
     @media screen and (min-width: 71rem) {
       .section__wrapper {
         padding-left: 40px;
         padding-right: 40px; } }
-  .section__separator {
-    position: absolute;
-    top: -21.5vw;
-    max-height: 9.375rem;
-    width: 100%;
-    display: grid; }
-    .section__separator * {
-      grid-area: 1/1; }
 
 @media screen and (min-width: 0rem) and (max-width: 49.9375rem) {
   .nav.-sticky.-bottom + main {

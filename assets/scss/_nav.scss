@@ -14,7 +14,6 @@
   -webkit-backface-visibility: hidden;
 
   &-main{
-    background-color: transparent;
     max-width: #{$large}px;
     width: 100%;
     height: $nav-height;
@@ -84,6 +83,8 @@
       position: relative;
       // width: 100%;
       // height: 100%;
+      margin: 0 auto -2rem;
+      margin: 0 0 -2rem;
       min-height: initial;
       background: transparent;
       visibility: visible;

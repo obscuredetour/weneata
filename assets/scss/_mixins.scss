@@ -116,13 +116,13 @@
   border-radius: 28px;
   background-color: $color;
   color: #fff;
-  font-weight: 700;
-  letter-spacing: 1px;
-  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.15px;
+  // text-transform: uppercase;
   min-height: rem(50);
   padding: rem(14) 2.5rem;
   transition: color 300ms ease, background-color 300ms ease;
-  font-size:rem(14);
+  @include font-size(16);
 
   &:focus{
     outline: 1px solid $text-color;
@@ -169,6 +169,7 @@
   @include font-size(24);
   font-weight: 700;
   letter-spacing: -0.8px;
+  margin: 0 0 1rem;
 
   @include sizes($medium){
     @include font-size(36);
@@ -176,5 +177,39 @@
 
   @include sizes($large){
     @include font-size(48);
+  }
+}
+
+@mixin subheading(){
+  @include font-size(20);
+  font-weight: 400;
+  margin: 0;
+
+  @include sizes($medium){
+    @include font-size(22);
+  }
+
+  @include sizes($large){
+    @include font-size(24);
+  }
+}
+
+@mixin pattern-dots($color){
+  background-image: radial-gradient($color 1px, transparent 1px),radial-gradient($color 1px, transparent 1px);
+  background-size: calc(20 * 1px) calc(20 * 1px);
+  background-position: 0 0,calc(10 * 1px) calc(10 * 1px);
+}
+@mixin pattern-dots-md($color){
+  background-image: radial-gradient($color 1px, transparent 1px);
+  background-size: calc(10 * 1px) calc(10 * 1px);
+}
+
+@mixin separator($color){
+  color: $color;
+  @include pattern-dots($color);
+  height: 1.25rem;
+  margin: 1.25rem 0;
+  &:before, &:after {
+    margin: 1.25rem 0;
   }
 }
