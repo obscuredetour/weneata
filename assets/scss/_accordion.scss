@@ -1,0 +1,72 @@
+.accordion{
+  width: 100%;
+  background-color: $pampas;
+  border-radius: 12px;
+  
+  + .accordion{
+    margin-top: 1.5rem;
+  }
+
+  &__button{
+    @include plain-button;
+    @include font-size(18);
+    font-family: $font-sans;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    text-align: left;
+    font-weight: 500;
+    color: $text-color;
+    margin: 0;
+    padding: 1rem;
+  
+    @include sizes($medium){
+      @include font-size(20);
+    }
+
+    &.-active .accordion__arrow{
+      transform: rotate(180deg);
+    }
+  }
+
+  &__title{
+    margin-right: 1rem;
+  }
+
+  &__section{
+    max-height: 0;
+    font-size: 0;
+    visibility: hidden;
+    opacity: 0;
+    margin: 0;
+    padding: 0;
+    transition: max-height 500ms ease-in, opacity 500ms ease-in 100ms, margin 500ms ease-in;
+
+    &.-active{
+      max-height: 555rem;
+      visibility: visible;
+      font-size: 1rem;
+      opacity: 1;
+      margin: 0.75rem 0 0;
+      padding: 0 1rem 1rem;
+      transition: max-height 500ms ease, opacity 500ms ease, margin 500ms ease;
+    }
+  }
+
+  &__arrow {
+    max-width: 18px;
+    display: block;
+    margin-left: auto;
+    transition: transform 500ms ease;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__content{
+    margin: 0;
+    padding: 0;
+  }
+
+}

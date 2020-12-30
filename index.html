@@ -2,14 +2,12 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Simply Navigation - A lightweight navigation component</title>
-  <meta property="og:title" content="Simply Navigation"/>
-  <meta name="description" property="og:description" content="A simple navigation component built using vanilla JS &amp; Flexbox."/>
-  <meta property="og:url" content="https://github.com/obscuredetour/simply-nav/index.html"/>
-  <meta property="og:image" content="https://raw.githubusercontent.com/obscuredetour/simply-nav/master/assets/images/logo-full-dark.svg"/>
+  <meta charset="utf-8">
+  <title>WeNeata - Bookkeeping Advantage</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' 'unsafe-eval'">
 
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;700&display=swap" rel="stylesheet">
@@ -17,8 +15,6 @@
 </head>
 
 <body>
-  <!-- Navigation / nav-wrapper component -->
-  <!-- Right-side hamburger markup -->
   <header class="nav -right-aligned">
     <nav class="nav-main">
       <a class="nav-logo" href="#">
@@ -26,25 +22,23 @@
       </a>
       <ul class="nav-list" role="menu" aria-hidden="true">
         <div class="nav-list__wrapper">
-          <!-- <li class="nav-list__item" role="none">
-            <a class="nav-logo" href="#">
-              <img class="nav-logo__image" id="logo" src="assets/images/logo.svg" alt="Logo">
-            </a>
-          </li> -->
           <li class="nav-list__item" role="none">
-            <a class="nav-list__link" role="menuitem" href="https://github.com/obscuredetour/simply-nav">GitHub</a>
+            <a class="nav-list__link" role="menuitem" href="#help">How We Help</a>
           </li>
           <li class="nav-list__item" role="none">
-            <a class="nav-list__link" role="menuitem" href="#features">Features</a>
+            <a class="nav-list__link" role="menuitem" href="#benefits">Benefits</a>
           </li>
           <li class="nav-list__item" role="none">
-            <a class="nav-list__link" role="menuitem" href="#custom">Customizable</a>
+            <a class="nav-list__link" role="menuitem" href="#services">Services</a>
           </li>
           <li class="nav-list__item" role="none">
-            <a class="nav-list__link" role="menuitem" href="#how-to-use">How to use</a>
+            <a class="nav-list__link" role="menuitem" href="#faq">FAQ</a>
           </li>
           <li class="nav-list__item" role="none">
-            <a class="nav-list__link" role="menuitem" href="#example">Example Link</a>
+            <a class="nav-list__link" role="menuitem" href="#about">About</a>
+          </li>
+          <li class="nav-list__item" role="none">
+            <a class="nav-list__link-button" role="menuitem" href="#contact">Contact</a>
           </li>
         </div>
       </ul>
@@ -57,19 +51,22 @@
     <ul class="nav-list -mobile" role="menu" aria-hidden="true">
       <div class="nav-list__wrapper">
         <li class="nav-list__item" role="none">
-          <a class="nav-list__link" role="menuitem" href="https://github.com/obscuredetour/simply-nav">GitHub</a>
+          <a class="nav-list__link" role="menuitem" href="#help">How We Help</a>
         </li>
         <li class="nav-list__item" role="none">
-          <a class="nav-list__link" role="menuitem" href="#features">Features</a>
+          <a class="nav-list__link" role="menuitem" href="#benefits">Benefits</a>
         </li>
         <li class="nav-list__item" role="none">
-          <a class="nav-list__link" role="menuitem" href="#custom">Customizable</a>
+          <a class="nav-list__link" role="menuitem" href="#services">Services</a>
         </li>
         <li class="nav-list__item" role="none">
-          <a class="nav-list__link" role="menuitem" href="#how-to-use">How to use</a>
+          <a class="nav-list__link" role="menuitem" href="#faq">FAQ</a>
         </li>
         <li class="nav-list__item" role="none">
-          <a class="nav-list__link" role="menuitem" href="#example">Example Link</a>
+          <a class="nav-list__link" role="menuitem" href="#about">About</a>
+        </li>
+        <li class="nav-list__item" role="none">
+          <a class="nav-list__link" role="menuitem" href="#contact">Contact</a>
         </li>
       </div>
       <div class="nav-overlay"></div>
@@ -91,15 +88,15 @@
       </div>
     </section>
     
-    <section class="section grow">
+    <section class="section grow" id="help">
       <div class="section__wrapper">
         <div class="grow__content">
-          <h2 class="grow__heading">We want to help your business grow</h2>
-          <p class="grow__subheading">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid velit quisquam soluta voluptatum et beatae.</p>
+          <h2 class="section__heading">We want to help your business grow</h2>
+          <p class="section__subheading">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid velit quisquam soluta voluptatum et beatae.</p>
           <div class="grow__cards">
-            <div class="grow__card">
+            <div class="grow__card -shadow">
               <div class="grow__card-icon">
-                <img src="assets/images/icon_hourglass-start.svg" alt="Hourglass - https://fontawesome.com/license">
+                <img src="assets/images/icon_hourglass-start.svg" alt="Hourglass start icon">
               </div>
               <div class="grow__card-content">
                 <h3 class="grow__card-title">You'll Have More Time</h3>
@@ -107,18 +104,18 @@
                   customer retention, thus increasing your new and recurring income!</p>
               </div>
             </div>
-            <div class="grow__card">
+            <div class="grow__card -shadow">
               <div class="grow__card-icon">
-                <img src="assets/images/icon_dove-solid.svg" alt="Dove - https://fontawesome.com/license">
+                <img src="assets/images/icon_dove-solid.svg" alt="Dove icon">
               </div>
               <div class="grow__card-content">
                 <h3 class="grow__card-title">You'll Have Peace of Mind</h3>
                 <p class="grow__card-copy">Knowing that you can call us with any questions, comment or concern that affects your business or personal situation and we'll be there to help!</p>
               </div>
             </div>
-            <div class="grow__card">
+            <div class="grow__card -shadow">
               <div class="grow__card-icon">
-                <img src="assets/images/icon_calendar-check.svg" alt="Calendar - https://fontawesome.com/license">
+                <img src="assets/images/icon_calendar-check.svg" alt="Calendar checkmark icon">
               </div>
               <div class="grow__card-content">
                 <h3 class="grow__card-title">You'll Be Able to Plan</h3>
@@ -129,15 +126,15 @@
         </div>
       </div>
     </section>
-    <section class="section grow">
+    <section class="section grow" id="benefits">
       <div class="section__wrapper">
         <div class="grow__content">
-          <h2 class="grow__heading">Other benefits</h2>
-          <!-- <p class="grow__subheading">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid velit quisquam soluta voluptatum et beatae.</p> -->
+          <h2 class="section__heading">Other benefits</h2>
+          <!-- <p class="section__subheading">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid velit quisquam soluta voluptatum et beatae.</p> -->
           <div class="grow__cards">
             <div class="grow__card">
               <div class="grow__card-image">
-                <img src="https://source.unsplash.com/-YiTdas-O1c/800x600" alt="">
+                <img src="assets/images/benefits_privacy.jpg" alt="Door with private sign">
               </div>
               <div class="grow__card-content">
                 <h3 class="grow__card-title">Privacy and Confidentiality</h3>
@@ -146,7 +143,7 @@
             </div>
             <div class="grow__card">
               <div class="grow__card-image">
-                <img src="https://source.unsplash.com/pElSkGRA2NU/800x600" alt="">
+                <img src="assets/images/benefits_payroll.jpg" alt="Piggy bank">
               </div>
               <div class="grow__card-content">
                 <h3 class="grow__card-title">Lower Payroll Costs</h3>
@@ -155,7 +152,7 @@
             </div>
             <div class="grow__card">
               <div class="grow__card-image">
-                <img src="https://source.unsplash.com/Xjp9CDaxAX8/800x600" alt="">
+                <img src="assets/images/benefits_red-carpet.jpg" alt="Red carpet on stairs">
               </div>
               <div class="grow__card-content">
                 <h3 class="grow__card-title">Red Carpet Service</h3>
@@ -167,119 +164,235 @@
       </div>
     </section>
 
-    <!-- <section>
-      <span class="image -left">
-        <img src="assets/images/logo-full.svg" alt="Simply nav logo">
-      </span>
-      <h1 class="_mt0">Simply Navigation</h1>
-      <p class="_mthalf subtitle">Lightweight simple navigation built with flexbox and vanilla JavaScript</p>
-      
-      <h3 id="features">Features</h3>
-      <ul class="featured-list -features">
-        <li>No dependencies.</li>
-        <li>Fully responsive.</li>
-        <li>Built using Flexbox & vanilla JavaScript only.</li>
-        <li>Mobile menu closes when a link is selected.</li>
-        <li>Easy close mobile menu. Closable via 'X' and alt-side page overlay.</li>
-        <li>Buttons & links made for mobile. Large footprint for optimal finger usage.</li>
-        <li>Menu button animates to a close button 'X' (CSS only - <a href="https://github.com/march08/animated-burgers" target="_blank">thx march08</a>)</li>
-        <li>Mobile menu scrollable (if its content goes beyond the screen)</li>
-        <li>Page and body are not scrollable (when mobile menu open).</li>
-        <li>Written in SCSS.</li>
-        <li>Written using <a href="https://rscss.io/" target="_blank">RSCSS</a> guidelines.</li>
-        <li class="-new">Left &amp; Right side layouts now supported.</li>
-        <li class="-new">ARIA/Accessibility updates, keyboard navigation.</li>
-      </ul>
-      
-      <hr class="-major">
-  
-      <h2 id="custom">Features</h2>
-      <h3 id="custom">Customizable</h3>
-      <ul class="featured-list">
-        <li>Breakpoint variable - <strong>default at 800px</strong></li>
-        <li>Sticky (fixed) navigation bar available. <a href="#sticky-nav">See below</a>.</li>
-        <li>Traditional or offset hamburger menu icons. <a href="#menu-icon">See below</a></li>
-        <li>Bottom mobile nav bar for the bold! <a href="#bottom-nav">See below</a></li>
-      </ul>
-      <hr id="sticky-nav">
-      <h4>Sticky (fixed) navigation</h4>
-      <p>To enable a fixed nav bar, add class <code>-sticky</code> to the <code>nav-main</code> element.</p>
-      <div class="flex-container">
-        <div class="box">
-          <p>Sticky Nav is <span class="sticky-text"><strong>Off</strong></span></p>
-        </div>
-        <div class="box -alt">
-          <h5>Toggle sticky nav bar</h5>
-          <button class="button-default -sticky">Toggle</button>
-        </div>
-      </div>
-      <p><strong>Note:</strong> Sticky navigation bar requires padding and/or margin on the parent or adjacent element. For example, on this page the adjacent <em>main</em> HTML element has a top padding of 6.5rem (nav height is 4.5rem).
-      </p>
-
-      <hr id="menu-icon">
-
-      <h4 class="new-pill">Menu icon</h4>
-      <p>To enable the traditional menu icon, remove class <code>-offset</code> from the <code>burger</code> element.</p>
-      <div class="flex-container">
-        <div class="box">
-          <p>Traditional icon is <span class="menu-text"><strong>Off</strong></span></p>
-        </div>
-        <div class="box -alt">
-          <h5>Toggle menu icon</h5>
-          <button class="button-default -menu">Toggle</button>
-        </div>
-      </div>
-
-      <hr id="bottom-nav">
-
-      <h4 class="new-pill">Bottom mobile nav bar</h4>
-      <p>To enable the bottom mobile nav bar, add class <code>-bottom</code> on the <code>nav-main</code> element.</p>
-      <div class="flex-container">
-        <div class="box">
-          <p>Bottom mobile nav bar is <span class="bottomnav-text"><strong>Off</strong></span></p>
-        </div>
-        <div class="box -alt">
-          <h5>Toggle bottom mobile nav</h5>
-          <button class="button-default -bottomnav">Toggle</button>
+    <section class="section services" id="services">
+      <div class="section__wrapper">
+        <h2 class="section__heading">A glance at all the things we can help with</h2>
+        <div class="grow__cards">
+          <div class="grow__card -large">
+            <div class="grow__card-icon">
+              <img src="assets/images/icon_search-dollar.svg" alt="">
+            </div>
+            <div class="grow__card-content">
+              <h3 class="grow__card-title">Quickbooks Online Support</h3>
+              <p class="grow__card-copy">We can get your subscription at discounted prices and train you on the program.</p>
+            </div>
+          </div>
+          <div class="grow__card -large">
+            <div class="grow__card-icon">
+              <img src="assets/images/icon_file-dollar.svg" alt="">
+            </div>
+            <div class="grow__card-content">
+              <h3 class="grow__card-title">Financial Reporting</h3>
+              <p class="grow__card-copy">We can handle all of your basic bookkeeping needs and issue tailored monthly financials to you. We can even invoice your clients and pay your bills!</p>
+            </div>
+          </div>
+          <div class="grow__card -large">
+            <div class="grow__card-icon">
+              <img src="assets/images/icon_project-diagram.svg" alt="">
+            </div>
+            <div class="grow__card-content">
+              <h3 class="grow__card-title">Strategy Sessions</h3>
+              <p class="grow__card-copy">We are happy to do monthly strategy sessions to help you work through issues and new ideas to plan the future of your business and to discuss the financials in detail.</p>
+            </div>
+          </div>
+          <hr class="-major">
+          <div class="grow__card">
+            <div class="grow__card-image">
+              <img src="assets/images/services_payroll-and-tax-filing.jpg" alt="Tax shop window">
+            </div>
+            <div class="grow__card-content">
+              <h3 class="grow__card-title">Payroll and Sales Tax Filing</h3>
+              <p class="grow__card-copy">We are happy to do monthly strategy sessions to help you work through issues and new ideas to plan the future of your business and to discuss the financials in detail.</p>
+            </div>
+          </div>
+          <div class="grow__card">
+            <div class="grow__card-image">
+              <img src="assets/images/services_taxes.jpg" alt="Tax documents">
+            </div>
+            <div class="grow__card-content">
+              <h3 class="grow__card-title">Income Tax Help</h3>
+              <p class="grow__card-copy">We are happy to do monthly strategy sessions to help you work through issues and new ideas to plan the future of your business and to discuss the financials in detail.</p>
+            </div>
+          </div>
+          <div class="grow__card">
+            <div class="grow__card-image">
+              <img src="assets/images/services_legal.jpg" alt="Library, Law books on shelf">
+            </div>
+            <div class="grow__card-content">
+              <h3 class="grow__card-title">Legal Needs</h3>
+              <p class="grow__card-copy">We are happy to do monthly strategy sessions to help you work through issues and new ideas to plan the future of your business and to discuss the financials in detail.</p>
+            </div>
+          </div>
         </div>
       </div>
-      <p><strong>Note:</strong> Bottom mobile nav bar requires a sticky navigation bar. To enable a fixed nav bar, add class <code>-sticky</code> to the <code>nav-main</code> element. See the <a href="#sticky-nav">Sticky navigation</a> section for additional info.
-      </p>
+    </section>
 
-      <hr class="-major" id="how-to-use">
-      <h3>How to use</h3>
-      <p>Clone or download the repository to build a static website. Or alternatively insert the respective files into your project.</p>
-      <ul>
-        <li><code>simply-nav.js</code> - has all necessary JavaScript functions
-          <ul>
-            <li>File can be placed into your project or the anonymous function inside can be pasted into an existing JS file or <code>&lt;script&gt;</code> tag within an HTML file.</li>
-          </ul>
-        </li>
-        <li><code>nav.css</code> - has all necessary CSS styles for the navigation
-          <ul>
-            <li>File can be placed into your project or pasted into an existing CSS file or <code>&lt;style&gt;</code> tag within an HTML file.</li>
-          </ul>
-        </li>
-        <li>Markup structure can be found in <code>index.html</code>
-          <ul>
-            <li>The <code>nav-main</code> element contains all necessary markup for Simply Navigation to function.</li>
-          </ul>
-        </li>
-        <li>Standalone HTML file will be making a comeback in a future version.</li>
-      </ul>
-      <h3 id="example">Example Link</h3>
-      <p>This is an example that demonstrates an anchor link on the same page. The mobile menu closes when this link is chosen. This provides a more seamless experience for the user without requiring them to close the mobile menu after choosing a link.</p>
-    </section> -->
+    <section class="section faq" id="faq">
+      <div class="section__wrapper">
+        <h2 class="section__heading">Frequently asked questions</h2>
+        <dl class="section__columns">
+          <div class="section__column">
+            <div class="accordion">
+              <dt>
+                <button type="button" class="accordion__button">
+                  <span class="accordion__title">What's included in the Basic Bookkeeping Package?</span>
+                  <span class="accordion__arrow"><img src="assets/images/icon_chevron-down.svg" alt=""></span>
+                </button>
+              </dt>
+              <dd class="accordion__section">
+                <p class="accordion__content">
+                  Every month we will categorize all business related income and expense transactions and issue a monthly financial statement consisting of a Balance Sheet and a Profit and Loss.  These reports will help you understand your business past to make decisions on your business future. They are required in order to do any tax planning or to fund your business with mid-year loans. Unlimited email and text support is also included.
+                </p>
+              </dd>
+            </div>
+            <div class="accordion">
+              <dt>
+                <button type="button" class="accordion__button">
+                  <span class="accordion__title">What's not included in the Basic Bookkeeping package?</span>
+                  <span class="accordion__arrow"><img src="assets/images/icon_chevron-down.svg" alt=""></span>
+                </button>
+              </dt>
+              <dd class="accordion__section">
+                <p class="accordion__content">Anything above and beyond tracking of income and expense items for the month is not included in the Basic monthly package price. However, additional services are available as an add-on to your basic bookkeeping package. These add-ons can inclue: accrual basis accounting, detailed financials showing class tracking or job profitability, invoicing, bill payment, payroll, sales tax filing, tax planning and preparation and legal help.
+                </p>
+              </dd>
+            </div>
+            <div class="accordion">
+              <dt>
+                <button type="button" class="accordion__button">
+                  <span class="accordion__title">What qualifications does your team have?</span>
+                  <span class="accordion__arrow"><img src="assets/images/icon_chevron-down.svg" alt=""></span>
+                </button>
+              </dt>
+              <dd class="accordion__section">
+                <p class="accordion__content">Many of our team members are CPAs, legal professionals and Certifited Pro-Advisors. You can rest assured that you are working with the highest quality professionals. We all also belong to a large network of financial professionals, so if there is a question we have not seen before, we have a lot of resources in our back pocket to find an answer for you quickly.
+                </p>
+              </dd>
+            </div>
+            <div class="accordion">
+              <dt>
+                <button type="button" class="accordion__button">
+                  <span class="accordion__title">﻿If I have a question, how long does it take to get an email response?</span>
+                  <span class="accordion__arrow"><img src="assets/images/icon_chevron-down.svg" alt=""></span>
+                </button>
+              </dt>
+              <dd class="accordion__section">
+                <p class="accordion__content">We pride ourselves in being very responsive to our clients' important inquires. We strive to respond within 24 hours AT MOST (except over weekends and holidays.) If we are very busy, we will respond to let you know we've received your email and will address it shortly.
+                </p>
+              </dd>
+            </div>
+          </div>
+          <div class="section__column">
+            <div class="accordion">
+              <dt>
+                <button type="button" class="accordion__button">
+                  <span class="accordion__title">What hours do the bookkeepers and other team members work?</span>
+                  <span class="accordion__arrow"><img src="assets/images/icon_chevron-down.svg" alt=""></span>
+                </button>
+              </dt>
+              <dd class="accordion__section">
+                <p class="accordion__content">Due to the flexible nature of bookkeeping work, many team members work variouis hours of the day and night. However, we use standard M-F 8-5 work hours to address emails and phone calls.
+                </p>
+              </dd>
+            </div>
+            <div class="accordion">
+              <dt>
+                <button type="button" class="accordion__button">
+                  <span class="accordion__title">Is Quickbooks Online required to sign up for a monthly payment package?</span>
+                  <span class="accordion__arrow"><img src="assets/images/icon_chevron-down.svg" alt=""></span>
+                </button>
+              </dt>
+              <dd class="accordion__section">
+                <p class="accordion__content">Yes. Our team must use Quickbooks Online in order to handle the bookkeeping at the quoted prices. Versions Essentials, Plus, or Advanced are all acceptable. Simple Start or Quickbooks Self Employed are not. If you have a current subscription, you are ahead of the game. No need to get another subscription. If you do not currently have a subscription, the on-boarding videos will walk you through how to get that setup. We are able to offer 50% off to our new clients for 12 months. This is the best discount you cna get with Quickbooks Online. We highly recommend signing up for Essentials or Plus to start.
+                </p>
+              </dd>
+            </div>
+            <div class="accordion">
+              <dt>
+                <button type="button" class="accordion__button">
+                  <span class="accordion__title">Do you require a contract?</span>
+                  <span class="accordion__arrow"><img src="assets/images/icon_chevron-down.svg" alt=""></span>
+                </button>
+              </dt>
+              <dd class="accordion__section">
+                <p class="accordion__content">Nope! No contract is required. However, there are no partial month refunds.
+                </p>
+              </dd>
+            </div>
+            <div class="accordion">
+              <dt>
+                <button type="button" class="accordion__button">
+                  <span class="accordion__title">Is an engagement letter required?</span>
+                  <span class="accordion__arrow"><img src="assets/images/icon_chevron-down.svg" alt=""></span>
+                </button>
+              </dt>
+              <dd class="accordion__section">
+                <p class="accordion__content">Yes, an engagement letter is required. You can click that you accept the terms of service and that will act as our engagement letter. It is available for download below.
+                </p>
+              </dd>
+            </div>
+          </div>
+        </dl>
+      </div>
+    </section>
 
+    <section class="section contact" id="contact">
+      <div class="section__wrapper">
+        <h2 class="section__heading">Contact</h2>
+        <p class="section__subheading">We are eager to help you! We return calls or emails usually within 24 hours.</p>
+        <div class="section__columns">
+          <div class="section__column">
+            <a href="tel:8166071177" class="contact__link">
+              <span class="contact__link-label">Call Us</span>
+              <span class="contact__link-img"><img src="assets/images/icon_phone.svg" alt="Phone icon"></span>
+            </a>
+          </div>
+          <div class="section__column">
+            <a href="mailto:info@weneata.com" class="contact__link">
+              <span class="contact__link-label">Email Us</span>
+              <span class="contact__link-img"><img src="assets/images/icon_envelope.svg" alt="Envelope icon"></span>
+            </a>
+          </div>
+        </div>
+
+        <div class="about" id="about">
+          <div class="about__card">
+            <div class="about__card-img">
+              <img src="assets/images/suzanne.jpg" alt="Picture of Suzanne, Owner">
+            </div>
+            <div class="about__card-content">
+              <h3 class="about__card-title">About the Founder</h3>
+              <p class="about__card-copy">As Paul Harvey would say..The rest of the story... <br>The name of my business comes from the names of two very precious people in my life who both passed away in 2018. My mother's pet name given by her father was Wene (Lorene), and my Aunt (Juanita), we called Aunt Neat.  When we said it, WeNeata sounds like "we need a" so we filled in the blank. I was an Administrative assistant for the CEO and Vice-Presidents of the Kauffman Foundation for 8 years. <br><br>You don't need any professional writing experience to create great text-content, all you need is an idea and a keyboard.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
   <footer class="footer">
-    <p class="poweredby">Powered with ❤️ by <a target="_blank" href="https://github.com/obscuredetour/">obscure detour</a>.</p>
+    <div class="section__wrapper">
+      <div class="footer__links">
+        <a href="#help" class="footer__link">How We Help</a>
+        <a href="#benefits" class="footer__link">Benefits</a>
+        <a href="#services" class="footer__link">Services</a>
+        <a href="#faq" class="footer__link">FAQ</a>
+        <a href="#about" class="footer__link">About</a>
+        <a href="#contact" class="footer__link">Contact</a>
+      </div>
+      <div class="footer__social">
+        <a href="https://www.linkedin.com/in/suzannemathes/" class="footer__social-link">
+          <span class="footer__social-img"><img src="assets/images/icon_linkedin.svg" alt="LinkedIn icon"></span>
+        </a>
+        <a href="https://www.facebook.com/WeNeata" class="footer__social-link">
+          <span class="footer__social-img"><img src="assets/images/icon_facebook.svg" alt="Facebook icon"></span>
+        </a>
+      </div>
+    </div>
+    <p class="footer__copyright">Copyright &copy; 2020 Suzanne Mathes, Owner</p>
+    <p class="footer__madeby">Made with ❤️ by <a target="_blank" href="https://github.com/obscuredetour/">obscure detour</a></p>
   </footer>
 
-
-
-  <script src="assets/js/simply-nav.js"></script>
-  <!-- <script src="assets/js/main.js"></script> -->
+  <script defer src="assets/js/main.js"></script>
 </body>
 
 </html>

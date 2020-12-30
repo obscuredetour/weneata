@@ -70,22 +70,6 @@
   padding: 0;
 }
 
-@mixin new-pill {
-  content: 'new';
-  position: absolute;
-  padding: 0.125rem 0.25rem;
-  border: 3px solid $honest;
-  border-radius: 25px;
-  background-color: $key-lime;
-  color: $deep-forest;
-  font-size: .6875rem;
-  text-transform: uppercase;
-  letter-spacing: 0.25px;
-  font-weight: 600;
-  left: -1.625rem;
-  top: -2px;
-}
-
 @mixin link-hover($color: $text-color, $hover: $lotus){
   color: $color;
   transition: color 200ms ease-in-out;
@@ -123,9 +107,10 @@
   padding: rem(14) 2.5rem;
   transition: color 300ms ease, background-color 300ms ease;
   @include font-size(16);
+  // box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.12), 0 1px 2px 1px rgba(0, 0, 0, 0.24);
 
   &:focus{
-    outline: 1px solid $text-color;
+    outline: 2px solid $lotus;
   }
 
   &:hover {
@@ -144,10 +129,12 @@
   border: 2px solid $lotus;
   background-color: transparent;
   color: $color;
+  transition: color 300ms ease, background-color 300ms ease, border-color 300ms ease;
 
   &:hover {
-    color: #fff;
-    background-color: $lotus;
+    // color: #fff;
+    background-color: $potpourri;
+    border-color: $potpourri;
   }
 }
 

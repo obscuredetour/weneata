@@ -3,186 +3,296 @@
 //--------- styling for rest of page -------//
 main {
   margin: 0 auto;
+
   @include sizes($small){
     margin-top: -4.5rem;
-  }
-  // padding-top: 4.5rem;
-
-  > section:not([class]) {
-    padding: 1rem;
-    max-width: 40rem;
-    margin: 2rem auto;
-
-    > .subtitle {
-      padding-bottom: 1rem;
-      font-size: 1.125rem;
-
-      @media screen and (min-width: 590px) {
-        padding-bottom: 4rem;
-      }
-    }
   }
 
   @media screen and (min-width: $breakpoint) {
     padding-top: 6.5rem;
   }
+}
 
-  .featured-list.-features {
+.section {
+  position: relative;
+  padding: 4rem 0;
+
+  @include sizes($small){
+    padding: 6rem 0;
+  }
+
+  &__wrapper{
+    @include default-padding;
+    @include container;
+  }
+
+  &__columns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem 0 0;
+
     @include sizes($small){
-      column-count: 2;
-      column-gap: 2.5rem;
+      margin: 3rem 0 0;
+      flex-direction: row;
+      align-items: stretch;
     }
+  }
+
+  &__column{
+    width: 100%;
+    margin-bottom: 1.5rem;
+
+    @include sizes($small){
+      width: 50%;
+      &:first-of-type{
+        margin-right: 2rem;
+      }
+    }
+  }
+
+  &__heading {
+    @include section-heading;
+  }
+
+  &__subheading{
+    @include subheading;
   }
 }
 
-// linear-gradient(90deg, #5d6539 0%, #5d6539 60%, transparent 60%, transparent)
+.services {
+  background-color: $sand;
+  .grow__card {
+    background-color: $pampas;
+  }
+}
+
 .grow {
-  // @include pattern-dots(transparentize(#fff, 0.75));
   background-color: transparentize($color: $pampas, $amount: 0.5);
-  padding: 4rem 0;
   position: relative;
 
   + .grow {
     padding-top: 0;
   }
 
-  @include sizes($small){
-    padding: 6rem 0;
-  }
-
-  &__heading {
-    @include section-heading;
-    // color: #fff;
-  }
-
-  &__subheading{
-    @include subheading;
-  }
-
   &__content{
+    display: block;
   }
 
   &__cards {
     margin: 2rem 0 0;
     display: flex;
+    flex-wrap: wrap;
     @include sizes($small){
       margin: 3rem 0 0;
     }
   }
+}
 
-  &__card {
-    background-color: #fff;
-    // box-shadow: 0 2px 2px 4px rgba(0, 0, 0, 0.035), 0 4px 4px 6px rgba(0, 0, 0, 0.01);
-    border-radius: 12px;
-    padding: 2rem 1rem 1rem;
-    text-align: center;
+.contact{
+  background-color: $hint;
+
+  &__link{
+    @include button;
+    border-radius: 60px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 1rem;
+    width: 100%;
+
+    &-label{
+      display: block;
+      margin-right: 1.5rem;
+      @include font-size(20);
+      color: #fff;
+      transition: color 200ms ease-in-out, background-color 200ms ease-in-out;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    &-img{
+      max-width: rem(32);
+    }
+
+    img{
+      width: 100%;
+    }
+  }
+}
+
+.about{
+  position: relative;
+  z-index: 2;
+  margin: 2rem auto -26rem;
+
+  @include sizes($small){
+    margin: 3rem auto -17rem;
+    max-width: rem(900);
+  }
+
+  &__card{
     display: flex;
     flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 2rem 1.5rem;
+    box-shadow: 0 10px 20px hsla(0,0%,0,.15), 0 3px 6px hsla(0,0%,0,.10);
+
     @include sizes($small){
-      @include column-size(3, 20);
-      margin-right: 1.25rem;
-      &:last-of-type{
-        margin-right: 0;
-      }
-    }
-    @include sizes($medium){
-      @include column-size(3, 32);
-      margin-right: 2rem;
+      flex-direction: row;
+      padding: 3rem 2.5rem;
     }
 
-    &-content{
-      padding: 0 1rem;
-      margin: 1.5rem auto auto;
-    }
+    &-img{
+      margin-right: 1.5rem;
+      // display: block;
+      // position: relative;
+      // &:after{
+      //   position: absolute;
+      //   left: -2.5%;
+      //   top: -2.5%;
+      //   content: '';
+      //   width: 105%;
+      //   height: 105%;
+      //   display: block;
+      //   background-color: $potpourri;
+      //   z-index: 0;
+      //   border-radius: 50%;
+      // }
 
-    &-image {
-      padding: 0;
-      margin: -1rem 0 1rem;
-      img {
-        width: 100%;
-        border-radius: 12px;
+      img{
+        position: relative;
+        z-index: 2;
+        border-radius: 50%;
       }
-    }
-    &-icon {
-      padding: 1.75rem;
-      margin: 0 auto;
-      background-color: transparentize($color: $pink-dust, $amount: 0.5);
-      border-radius: 100%;
-      width: 100px;
-      height: 100px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      img {
-        width: 100%;
-        max-width: 50px;
+
+      @include sizes($small){
+        margin-right: 2.5rem;
       }
     }
 
     &-title{
-      @include font-size(18);
-      font-weight: 500;
-      margin: 0 0 1rem;
+      @include subheading;
+      // @include font-size(20);
+      font-weight: 600;
+      margin: 1.25rem 0 1.25rem;
     
-      @include sizes($medium){
-        @include font-size(20);
-      }
-    
-      @include sizes($large){
-        // @include font-size(24);
+      @include sizes($small){
+        margin: 0 0 1.25rem;
       }
     }
-  }
-}
 
-.section {
-  position: relative;
-  // background-color: $pampas;
-  // max-width: #{$xlarge}px;
-  // margin: 0 auto;
-
-  // &:before, &:after {
-  //   position: absolute;
-  //   background-color: $pampas;
-  //   max-width: #{$xlarge}px;
-  //   margin: 0 auto;
-  //   content: '';
-  //   display: block;
-  //   height: 20rem;
-  //   width: 100%;
-  //   z-index: -1;
-  // }
-
-  // &:before{
-  //   top: -20rem;
-  //   border-top-left-radius: 24px;
-  //   border-top-right-radius: 24px;
-  // }
-  // &:after{
-  //   bottom: -20rem;
-  //   border-bottom-left-radius: 24px;
-  //   border-bottom-right-radius: 24px;
-  // }
-
-  &__wrapper{
-    @include default-padding;
-    @include container;
-  }
-}
-
-//handle bottom nav
-.nav.-sticky.-bottom{
-  @include sizes(0, $breakpoint){
-    + main {
-      padding-top: 0;
+    &-copy{
+      @include font-size(16);
+      font-weight: 400;
+      margin: 0;
+    
+      @include sizes($medium){
+        @include font-size(18);
+      }
     }
   }
 }
 
 //footer
-.poweredby, .poweredby:first-of-type {
-  margin: 7rem auto 1rem;
-  font-size: 0.8125rem;
-  color: $gray;
-  text-align: center 
+.footer{
+  background-color: $oyster;
+  padding: 30rem 0 1rem;
+
+  @include sizes($small){
+    padding: 20rem 0 1rem;
+  }
+
+  &__links {
+    margin: 0 auto 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__link{
+    text-align: center;
+    margin: 0 2rem 1rem 0;
+    color: $text-color;
+    line-height: 1;
+    border-bottom: 1px solid $text-color;
+    transition: color 200ms ease-in-out, border-color 200ms ease-in-out;
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+    @include focus-outline;
+    
+    &:hover{
+      color: $lotus;
+      border-color: $lotus;
+    }
+
+    &:after{
+      content: '|';
+      position: absolute;
+      right: -1rem;
+      color: $napa;
+      display: inline-block;
+    }
+
+    &:last-of-type{
+      margin-right: 0;
+      &:after{
+        content: none;
+      }
+    }
+  }
+
+  &__social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 3rem;
+    position: relative;
+    &:before{
+      content: '';
+      width: 40%;
+      height: 2px;
+      background-color: $sand;
+      display: block;
+      top: -1.75rem;
+      position: absolute;
+    }
+
+    &-link{
+      @include button;
+      @include focus-outline;
+      border-radius: 50%;
+      text-decoration: none;
+      padding: 2rem;
+      width: 3rem;
+      height: 3rem;
+      &:first-of-type {
+        margin-right: 2rem;
+      }
+    }
+    &-img{
+      display: block;
+      img {
+        width: auto;
+        max-width: 24px;
+        max-height: 28px
+      }
+    }
+  }
+  &__copyright{
+    margin: 1rem auto 2rem;
+    @include font-size(14);
+    color: $mine;
+    text-align: center;
+  }
+  &__madeby {
+    margin: 1rem auto 0;
+    @include font-size(12);
+    color: $asher;
+    text-align: center 
+  }
 }
