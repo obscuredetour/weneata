@@ -54,7 +54,8 @@
   }
 
   &__arrow {
-    max-width: 18px;
+    flex-shrink: 0;
+    width: 18px;
     display: block;
     margin-left: auto;
     transition: transform 500ms ease;
